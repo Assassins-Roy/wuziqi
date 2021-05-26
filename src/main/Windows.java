@@ -24,6 +24,7 @@ public class Windows extends JFrame implements MouseListener {
         this.addMouseListener(this);
     }
 
+    //绘画格子和棋子
     @Override
     public void paint(Graphics g) {
         // TODO Auto-generated method stub
@@ -87,17 +88,17 @@ public class Windows extends JFrame implements MouseListener {
                 else if(var==2) var=1;
             }
         }
-        else if(e.getX()>690&&e.getX()<740&&e.getY()>60&&e.getY()<90) {
+        else if(e.getX()>600&&e.getX()<650&&e.getY()>60&&e.getY()<90) {
             chess.RetChess();
             if(var==1) var=2;
             else if(var==2) var=1;
             this.repaint();
         }
-        if(e.getX()>690&&e.getX()<740&&e.getY()>120&&e.getY()<150) {
+        if(e.getX()>600&&e.getX()<650&&e.getY()>120&&e.getY()<150) {
             chess.Restart();
             this.repaint();
         }
-        if(e.getX()>690&&e.getX()<760&&e.getY()>180&&e.getY()<210) {
+        if(e.getX()>600&&e.getX()<650&&e.getY()>180&&e.getY()<210) {
             Object[] options = {"白先","黑先"};
             int n = JOptionPane.showOptionDialog(null,"白先还是黑先？","游戏设置",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE, null,options,options[0]);
             if(n==0) this.var=1;
