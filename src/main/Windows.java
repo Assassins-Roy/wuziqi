@@ -16,7 +16,7 @@ public class Windows extends JFrame implements MouseListener {
     public Windows(String title) {
         super(title);
         chess = new Chess(19, 19);
-        this.setSize(800, 600);
+        this.setSize(700, 600);
         this.setLocation(800, 200);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
@@ -44,12 +44,12 @@ public class Windows extends JFrame implements MouseListener {
                     g.fillOval(20+i*30, 50+j*30, 20, 20);
             }
         }
-        g.drawRect(690,60, 50, 30);
-        g.drawString("悔棋",700,80);
-        g.drawRect(690,120,50, 30);
-        g.drawString("开始",700,140);
-        g.drawRect(690,180,50, 30);
-        g.drawString("设置",700,200);
+        g.drawRect(600,60, 50, 30);
+        g.drawString("悔棋",610,80);
+        g.drawRect(600,120,50, 30);
+        g.drawString("开始",610,140);
+        g.drawRect(600,180,50, 30);
+        g.drawString("设置",610,200);
 
     }
 
@@ -77,10 +77,10 @@ public class Windows extends JFrame implements MouseListener {
             int a = chess.ChessIt(_CgetX(e.getX()), (_CgetY(e.getY())), var);
             this.repaint();
             if (a == 1) {
-                JOptionPane.showMessageDialog(null,"白棋胜利", "恭喜", JOptionPane.DEFAULT_OPTION);;
+                JOptionPane.showMessageDialog(null,"白棋胜利", "恭喜", JOptionPane.DEFAULT_OPTION);
             }
             if(a==2) {
-                JOptionPane.showMessageDialog(null,"黑棋胜利", "恭喜", JOptionPane.DEFAULT_OPTION);;
+                JOptionPane.showMessageDialog(null,"黑棋胜利", "恭喜", JOptionPane.DEFAULT_OPTION);
             }
             if(a!=-1) {
                 if(var==1) var=2;
